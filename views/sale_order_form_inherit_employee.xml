@@ -1,0 +1,19 @@
+<odoo>
+    <record id="view_order_form_inherit_employee_button" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.employee.button</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            
+            <!-- Botón arriba de las líneas -->
+            <xpath expr="//field[@name='order_line']" position="before">
+                <button name="action_fill_employees"
+                        type="object"
+                        string="Autocompletar Empleados"
+                        class="btn-primary"
+                        />
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
